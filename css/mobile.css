@@ -1,0 +1,14 @@
+/* ============HEADER============  */
+@media screen and (min-width: 480px) {
+  .container {
+    width: 426px;
+  }
+
+  .menu-contacts-tel {
+    font-size: 36px;
+  }
+
+  .modal-address > .team-soc-list {
+    gap: 56px;
+  }
+}

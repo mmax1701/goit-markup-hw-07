@@ -61,15 +61,19 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 /* ============HEADER============ */
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e7e9fc;
+}
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px;
 }
 
 .logo {
@@ -86,11 +90,10 @@ body {
   color: var(--brand-color);
 }
 
-.header-item {
+.header-list {
   display: none;
 }
-
-.contacts {
+.contacts-list {
   display: none;
 }
 .menu-open {
@@ -118,6 +121,7 @@ body {
   background-color: #ffffff;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  transition: opacity 300ms linear, visibility 300ms linear;
 }
 
 .modal-wrap {
@@ -131,9 +135,6 @@ body {
   position: absolute;
   top: 40px;
   right: 40px;
-}
-
-.modal-address {
 }
 
 .menu-contacts-item:not(:last-child) {
@@ -262,26 +263,39 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/logo.jpg);
+    url(../images/logo-mob.jpg);
   background-color: var(--main-color-text);
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 112px;
+  padding-bottom: 112px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/logo-mob@2x.jpg);
+  }
+}
+
 .hero-container {
-  max-width: 496px;
+  max-width: 319px;
   text-align: center;
   margin: auto;
 }
 .hero-title {
-  font-size: 56px;
-  line-height: 1.07;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: #ffffff;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
 }
 .hero-btn {
   min-width: 169px;
@@ -305,8 +319,8 @@ body {
 
 /* ============BENEFITS============ */
 .benefits {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .benefits-container {
@@ -314,34 +328,30 @@ body {
 
 .benefits-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .benefits-item {
-  max-width: 264px;
+  max-width: 396px;
 }
 
 .benefits-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  margin-bottom: 8px;
-
-  height: 112px;
-  background: #f4f4fd;
+  display: none;
 }
 .icon-antenna {
 }
 .benefits-item-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--main-color-text);
   margin-bottom: 8px;
 }
 .benefits-item-text {
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -349,44 +359,26 @@ body {
 }
 /* ============GALLERY============ */
 .gallery {
-  padding-bottom: 120px;
-}
-.gallery-container {
-}
-.gallery-title {
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: var(--main-color-text);
-}
-
-.gallery-list {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin-top: 72px;
-}
-
-.gallery-item {
-  max-width: calc((100%-24px * 2) / 3);
+  display: none;
 }
 /* ============TEAM============ */
 .team {
   background: #f4f4fd;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 128px;
 }
 
-.team-container {
+.team > .container {
+  width: 294px;
 }
 
 .team-list {
   margin-top: 72px;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 .team-item {
   width: 264px;
@@ -395,7 +387,6 @@ body {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
-  max-width: calc((100%-24px * 3) / 4);
 }
 .team-title {
   font-size: 36px;
@@ -456,8 +447,8 @@ body {
 
 /* ============CUSTOMERS============ */
 .customers {
-  padding-top: 130px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .customers-title {
   margin-bottom: 72px;
@@ -471,15 +462,17 @@ body {
 
 .customers-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
+  row-gap: 72px;
 }
 
 .customers-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 168px;
+  width: 190px;
   height: 88px;
   border: 1px solid #8e8f99;
   border-radius: 4px;
@@ -612,7 +605,14 @@ body {
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .footer-logo {
   font-family: 'Raleway';
@@ -629,6 +629,7 @@ body {
 .footer-text {
   max-width: 264px;
   margin-top: 16px;
+  margin-bottom: 72px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -637,6 +638,10 @@ body {
 }
 
 .footer-soc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 72px;
 }
 .footer-soc-text {
   margin-bottom: 16px;
@@ -679,6 +684,8 @@ body {
 }
 
 .footer-subscribe-text {
+  display: block;
+  text-align: center;
   height: 24px;
   width: 100%;
   margin-bottom: 16px;
@@ -691,7 +698,8 @@ body {
 
 .footer-subscribe-wrap {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
 }
 .footer-subscribe-input {
   padding-left: 16px;
@@ -701,7 +709,7 @@ body {
   align-items: center;
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.6);
-  width: 264px;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -711,6 +719,7 @@ body {
 }
 
 .submit-btn {
+  margin: 0 auto;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -754,8 +763,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 408px;
-  min-height: 576px;
+  width: 100%;
+  min-height: 100%;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);

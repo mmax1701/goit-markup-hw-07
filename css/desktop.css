@@ -3,4 +3,140 @@
   .container {
     width: 1158px;
   }
+
+  .logo {
+    margin-right: 76px;
+  }
+  .header-link.current::after {
+    bottom: -24px;
+  }
+
+  .contacts-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  .contacts-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  /* ============HERO============ */
+  .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/logo.jpg);
+    background-color: var(--main-color-text);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/logo@2x.jpg);
+    }
+  }
+
+  .hero-title {
+    margin-bottom: 48px;
+  }
+
+  /* ===========BENEFITS=========== */
+  .benefits {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .benefits-item {
+    max-width: 264px;
+  }
+
+  .benefits-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 8px;
+
+    height: 112px;
+    background: #f4f4fd;
+  }
+
+  .benefits-item-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .benefits-item-text {
+    font-weight: 400;
+  }
+
+  /* ===========GALLERY=========== */
+  .gallery {
+    display: inherit;
+    padding-bottom: 120px;
+  }
+  .gallery-container {
+  }
+  .gallery-title {
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--main-color-text);
+  }
+
+  .gallery-list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 72px;
+  }
+
+  .gallery-item {
+    max-width: calc((100%-24px * 2) / 3);
+  }
+
+  /* ============TEAM============ */
+  .team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .team > .container {
+    width: 1158px;
+  }
+  .team-list {
+    flex-direction: row;
+  }
+
+  .team-item {
+    max-width: calc((100%-24px * 3) / 4);
+  }
+
+  /* ==========CUSTOMERS========== */
+  .customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  /* ============FOOTER============ */
+  .footer-container {
+    justify-content: space-between;
+    max-width: inherit;
+  }
+
+  /* ============BACKDROP============ */
 }

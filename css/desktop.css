@@ -132,6 +132,21 @@
     padding-bottom: 120px;
   }
 
+  /* ============FILTER============ */
+  .filter-list {
+    margin-bottom: 72px;
+  }
+  /* ============PRODUCTS============ */
+  .products {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
+
+  .products-item {
+    width: 360px;
+    height: 420px;
+  }
+
   /* ============FOOTER============ */
   .footer-container {
     justify-content: space-between;

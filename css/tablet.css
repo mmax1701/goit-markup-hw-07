@@ -148,6 +148,30 @@
     height: 88px;
   }
 
+  /* ============FILTER============ */
+  .filter-list {
+    justify-content: center;
+    row-gap: 72px;
+    margin-bottom: 64px;
+  }
+
+  /* ============PRODUCTS============ */
+
+  .products {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+
+  .products-list {
+    row-gap: 72px;
+  }
+
+  .products-item {
+    width: 356px;
+    height: 420px;
+    max-width: calc((100%-24px) / 2);
+  }
+
   /* ============FOOTER============ */
   .footer-container {
     flex-wrap: wrap;
